@@ -5,7 +5,7 @@ export default function LoginPage() {
     <div className="max-w-sm mx-auto text-center">
       <h1 className="text-3xl font-bold text-stone-900">Admin Login</h1>
       <p className="mt-2 text-stone-600">
-        This is a protected area. Please "log in" to continue.
+        This is a protected area. Please &quot;log in&quot; to continue.
       </p>
       <form action={login} className="mt-6">
         <button
