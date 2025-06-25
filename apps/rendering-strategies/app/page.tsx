@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import React from "react";
 import {
   Card,
   CardContent,
@@ -24,9 +24,9 @@ export default async function Dashboard() {
       </div>
       <WelcomeBanner />
 
-      <Suspense fallback={<StatsCardSkeleton />}>
+      <React.Suspense fallback={<StatsCardSkeleton />}>
         <OverviewStats />
-      </Suspense>
+      </React.Suspense>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
         <Card className="col-span-4">
@@ -43,9 +43,9 @@ export default async function Dashboard() {
             <CardDescription>You made 265 sales this month.</CardDescription>
           </CardHeader>
           <CardContent>
-            <Suspense fallback={<RecentSalesSkeleton />}>
+            <React.Suspense fallback={<RecentSalesSkeleton />}>
               <RecentSales />
-            </Suspense>
+            </React.Suspense>
           </CardContent>
         </Card>
       </div>

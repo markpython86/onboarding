@@ -69,7 +69,7 @@ export function CreatePollForm() {
           Enter your question and provide at least two options.
         </CardDescription>
       </CardHeader>
-      <form ref={formRef} action={formAction}>
+      <form ref={formRef} action={formAction} className="flex flex-col gap-4">
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="question">Question</Label>

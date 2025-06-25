@@ -38,7 +38,7 @@ export default async function ProjectsPage() {
             key={project.id}
             className="block group"
           >
-            <Card className="overflow-hidden transition-shadow duration-300 group-hover:shadow-xl">
+            <Card className="overflow-hidden transition-shadow duration-300 group-hover:shadow-xl pt-0">
               <img
                 src={project.imageUrl}
                 alt={project.title}

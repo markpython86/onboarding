@@ -31,7 +31,7 @@ export default function MarketingLayout({
         </nav>
       </header>
       {/* Render the main page content and the modal slot */}
-      {children}
+      <div className="flex-1 mx-auto h-full container py-12">{children}</div>
       {modal}
       <footer className="bg-white border-t border-stone-200">
         <div className="container mx-auto px-6 py-4 text-center text-stone-500">

@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@workspace/ui/components/card";
 import { getPolls } from "@/lib/db";
-import { Suspense } from "react";
+import React from "react";
 import { CreatePollForm } from "@/components/create-poll";
 import { unstable_noStore as noStore } from "next/cache";
 
@@ -113,9 +113,9 @@ export default function HomePage() {
 
       <div className="space-y-4">
         <h2 className="text-2xl font-bold tracking-tight">Available Polls</h2>
-        <Suspense fallback={<PollsSkeleton />}>
+        <React.Suspense fallback={<PollsSkeleton />}>
           <PollsList />
-        </Suspense>
+        </React.Suspense>
       </div>
     </div>
   );

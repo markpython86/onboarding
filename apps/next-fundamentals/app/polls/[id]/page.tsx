@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Suspense } from "react";
+import React from "react";
 import { getPoll } from "@/lib/db";
 import {
   Card,
@@ -26,7 +26,7 @@ export default async function PollPage({
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 flex flex-col gap-4 py-12">
       <Link href="/">
         <Button variant="outline">← Back to All Polls</Button>
       </Link>
@@ -38,9 +38,9 @@ export default async function PollPage({
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Suspense fallback={<div>Loading options...</div>}>
+          <React.Suspense fallback={<div>Loading options...</div>}>
             <PollVoteForm initialPoll={poll} />
-          </Suspense>
+          </React.Suspense>
         </CardContent>
       </Card>
     </div>
